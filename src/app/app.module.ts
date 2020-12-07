@@ -7,6 +7,8 @@ import { MainComponent } from './main/main.component';
 import { UserComponent } from './user/user.component';
 import {RouterModule, Routes} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import { TrainComponent } from './train/train.component';
 
 const routes: Routes = [
   {
@@ -17,20 +19,26 @@ const routes: Routes = [
     path:'',
     component:MainComponent
   },
+  {
+    path:'train',
+    component:TrainComponent
+  },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    UserComponent
+    UserComponent,
+    TrainComponent
   ],
   imports: [
     BrowserModule,
     //AppRoutingModule
     RouterModule.forRoot(routes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

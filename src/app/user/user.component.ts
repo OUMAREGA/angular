@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
+import {DateService} from "../shared/date.service";
 
 @Component({
   selector: 'app-user',
@@ -10,6 +11,8 @@ export class UserComponent implements OnInit {
 
   user_name = "oumarega";
 
+  //date_service: DateService;
+
   user = new FormControl('hello')
 
   user_forms = new FormGroup({
@@ -18,7 +21,9 @@ export class UserComponent implements OnInit {
     password: new FormControl('')
   });
 
-  constructor() { }
+  constructor( public date_service: DateService) {
+    //this.date_service = DateService
+  }
 
   ngOnInit(): void {
   }

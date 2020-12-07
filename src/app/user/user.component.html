@@ -29,3 +29,7 @@
   <li>Name : {{user_forms.value.name}}</li>
   <li>Email : {{user_forms.value.email}}</li>
 </ul>
+
+<h3>Service date</h3>
+provenance date : {{date_service.date | date:"long"}}
+provenance methode : {{date_service.getDate() | date:"long"}}
