@@ -9,10 +9,23 @@
   </ul>
 </div>
 
-<h3>REACTIVE FORMSS</h3>
+<h3>REACTIVE FORMS</h3>
 <input [formControl]="user" />
 <div>
   <ul>
     <li>Greetings: {{user.value}}</li>
   </ul>
 </div>
+
+
+<h3>REACTIVE FORMS - FormGroup</h3>
+<form [formGroup]="user_forms">
+  <input type="text" formControlName="name" />
+  <input type="email" formControlName="email" />
+  <input type="password" formControlName="password" />
+  <button (click)="send()" >Envoyer</button>
+</form>
+<ul>
+  <li>Name : {{user_forms.value.name}}</li>
+  <li>Email : {{user_forms.value.email}}</li>
+</ul>
