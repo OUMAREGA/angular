@@ -1,0 +1,31 @@
+<h3>Passer une variable</h3>
+<p>
+  Hello {{user}}!
+</p>
+
+<h3>Événement</h3>
+<button (click)="userClick()" >
+ Click
+</button>
+
+
+<p user=[user] >
+  Re {{user}}!
+</p>
+
+<h3>Directives Structurelles</h3>
+<div *ngFor="let item of elements;"  >
+  Re {{item}}
+</div>
+
+<h3>Directives Attributs</h3>
+<div *ngFor="let item of elements"  >
+  <p [ngClass]="{'hightlighted': item == 'Oumar'}" >Re {{item}}! </p>
+</div>
+
+<h3>Pipes</h3>
+<div>
+  {{date | date:"short"}}
+</div>
+
+

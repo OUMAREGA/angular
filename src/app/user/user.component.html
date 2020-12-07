@@ -1,0 +1,18 @@
+<p>user works!</p>
+
+
+<h3>TEMPLATE-DRIVEN FORMS</h3>
+<input [(ngModel)]="user_name" />
+<div>
+  <ul>
+    <li>Nom: {{user_name}}</li>
+  </ul>
+</div>
+
+<h3>REACTIVE FORMSS</h3>
+<input [formControl]="user" />
+<div>
+  <ul>
+    <li>Greetings: {{user.value}}</li>
+  </ul>
+</div>
