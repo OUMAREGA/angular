@@ -30,6 +30,13 @@
   <li>Email : {{user_forms.value.email}}</li>
 </ul>
 
+<div *ngIf="pass_data; else elseBlock" >
+  <p>Je part demain à {{pass_data}}</p>
+</div>
+
+<ng-template #elseBlock>Je ne pars plus</ng-template>
+
+
 <h3>Service date</h3>
 provenance date : {{date_service.date | date:"long"}}
 provenance methode : {{date_service.getDate() | date:"long"}}
